@@ -1,0 +1,19 @@
+{
+  "name": "digitalcookbook",
+  "version": "1.0.0",
+  "description": "Recipe searching app that also provide functionality to add items you need to grocery shopping list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchen0506/DigitalCookbook.git"
+  },
+  "author": "Jing Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchen0506/DigitalCookbook/issues"
+  },
+  "homepage": "https://github.com/jchen0506/DigitalCookbook#readme"
+}
