@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
-const { getAll } = require('./controller.js');
+const { getAll, getOne } = require('./controller.js');
 
 const app = express();
 
@@ -19,4 +19,6 @@ app.use((req, res, next) => {
 app.use(express.static(path.resolve(__dirname + '/../client/dist')));
 
 app.get('/searchRecipe', getAll);
+app.get('/recipes/:id', getOne);
+
 module.exports = app;
