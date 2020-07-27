@@ -14,9 +14,10 @@ module.exports = {
         useQueryString: true,
       },
       params: {
-        number: '10',
+        number: '12',
         offset: '0',
         query: keyword,
+        instructionsRequired: 'true',
       },
     })
       .then((response) => {
