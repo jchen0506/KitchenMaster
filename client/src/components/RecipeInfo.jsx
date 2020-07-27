@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Instructions from './Instructions.jsx';
 import Ingredients from './Ingredients.jsx';
-const RecipeInfo = ({ currentRecipe }) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
+const RecipeInfo = ({ currentRecipe, handleRecipeCloseClick }) => {
   const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
@@ -10,6 +13,7 @@ const RecipeInfo = ({ currentRecipe }) => {
 
   return isLoad ? (
     <div>
+      <FontAwesomeIcon onClick={handleRecipeCloseClick} icon={faTimes} />
       <Instructions
         instructions={currentRecipe.analyzedInstructions[0].steps}
       />
