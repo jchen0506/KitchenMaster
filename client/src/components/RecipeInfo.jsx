@@ -4,7 +4,7 @@ import Ingredients from './Ingredients.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const RecipeInfo = ({ currentRecipe }) => {
+const RecipeInfo = ({ currentRecipe, handleRecipeCloseClick }) => {
   const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const RecipeInfo = ({ currentRecipe }) => {
 
   return isLoad ? (
     <div>
-      <FontAwesomeIcon icon={faTimes} />
+      <FontAwesomeIcon onClick={handleRecipeCloseClick} icon={faTimes} />
       <Instructions
         instructions={currentRecipe.analyzedInstructions[0].steps}
       />

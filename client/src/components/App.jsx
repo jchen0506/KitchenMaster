@@ -42,8 +42,15 @@ const App = () => {
     setIsListOpen(false);
   };
 
+  var handleRecipeCloseClick = () => {
+    setIsRecipeOpen(false);
+  };
+
   var recipeComponent = isRecipeOpen ? (
-    <RecipeInfo currentRecipe={currentRecipe} />
+    <RecipeInfo
+      handleRecipeCloseClick={handleRecipeCloseClick}
+      currentRecipe={currentRecipe}
+    />
   ) : null;
 
   var shoplistComponent = isListOpen ? (
