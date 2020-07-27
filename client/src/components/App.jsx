@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import RecipeList from './RecipeList.jsx';
-
+import RecipeInfo from './RecipeInfo.jsx';
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [keyword, setKeyword] = useState('');
+  const [currentRecipe, setCurrentRecipe] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
 
   var handleInputChange = (e) => {
     setKeyword(e.target.value);
@@ -14,7 +16,6 @@ const App = () => {
     axios
       .get(`/searchRecipe?keyword=${keyword}`)
       .then((res) => {
-        console.log(res.data);
         setRecipes(res.data.results);
       })
       .catch((err) => {
@@ -22,11 +23,23 @@ const App = () => {
       });
   };
 
+  var handleRecipeClick = (id) => {
+    axios.get(`/recipes/${id}`).then((res) => {
+      setIsOpen(true);
+      setCurrentRecipe(res.data);
+    });
+  };
+
+  var recipeComponent = isOpen ? (
+    <RecipeInstruction currentRecipe={currentRecipe} />
+  ) : null;
+
   return (
     <div>
       <input onChange={handleInputChange} value={keyword} type="text" />
       <button onClick={handleSearchClick}>Search Recipes</button>
-      <RecipeList recipes={recipes} />
+      <RecipeList handleRecipeClick={handleRecipeClick} recipes={recipes} />
+      {recipeComponent}
     </div>
   );
 };
