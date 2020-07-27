@@ -26,6 +26,7 @@ module.exports = {
         res.status(404).send(error);
       });
   },
+
   getOne: (req, res) => {
     var id = req.params.id;
     console.log(id);

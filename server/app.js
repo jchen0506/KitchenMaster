@@ -19,8 +19,12 @@ app.use((req, res, next) => {
 app.use(express.static(path.resolve(__dirname + '/../client/dist')));
 
 app.get('/searchRecipe', getAll);
+
 app.get('/recipes/:id', getOne);
+
 app.post('/addItem', addOne);
+
 app.post('/deleteItem', deleteOne);
+
 app.get('/getList', getList);
 module.exports = app;
