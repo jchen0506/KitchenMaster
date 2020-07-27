@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
-const { getAll, getOne } = require('./controller.js');
-
+const { getAll, getOne } = require('./recipeController.js');
+const { addOne, deleteOne, getList } = require('./shoplistController.js');
 const app = express();
 
 app.use(bodyParser.json());
@@ -20,5 +20,7 @@ app.use(express.static(path.resolve(__dirname + '/../client/dist')));
 
 app.get('/searchRecipe', getAll);
 app.get('/recipes/:id', getOne);
-
+app.post('/addItem', addOne);
+app.post('/deleteItem', deleteOne);
+app.get('/getList', getList);
 module.exports = app;

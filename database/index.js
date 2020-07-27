@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  // we're connected!
+const redis = require('redis');
+const client = redis.createClient();
+
+client.on('error', function (error) {
+  console.error(error);
 });
 
-module.exports = db;
+module.exports = client;
