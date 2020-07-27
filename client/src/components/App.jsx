@@ -31,7 +31,7 @@ const App = () => {
   };
 
   var recipeComponent = isOpen ? (
-    <RecipeInstruction currentRecipe={currentRecipe} />
+    <RecipeInfo currentRecipe={currentRecipe} />
   ) : null;
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Instructions from './Instructions.jsx';
-
+import Ingredients from './Ingredients.jsx';
 const RecipeInfo = ({ currentRecipe }) => {
   const [isLoad, setIsLoad] = useState(false);
 
@@ -13,9 +13,10 @@ const RecipeInfo = ({ currentRecipe }) => {
       <Instructions
         instructions={currentRecipe.analyzedInstructions[0].steps}
       />
+      <Ingredients ingredients={currentRecipe.extendedIngredients} />
     </div>
   ) : (
-    <div>Loading</div>
+    <div>Loading...</div>
   );
 };
 
