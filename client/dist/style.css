@@ -149,7 +149,7 @@ input {
   padding-bottom: 20px;
   padding-left: 10px;
   margin-top: 50px;
-  max-height: max-content;
+  height: max-content;
 }
 
 .ingredientsEntry {
