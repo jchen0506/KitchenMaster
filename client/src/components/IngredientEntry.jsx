@@ -16,7 +16,7 @@ const Ingredient = ({ ingredient }) => {
       });
   };
   var style = {
-    'background-color': added ? 'gray' : 'coral',
+    backgroundColor: added ? 'gray' : 'coral',
   };
   return (
     <div className="ingredientsEntry">
