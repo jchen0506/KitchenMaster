@@ -45,6 +45,10 @@ const App = () => {
     setIsRecipeOpen(false);
   };
 
+  var recipeListComponent =
+    recipes.length === 0 ? null : (
+      <RecipeList handleRecipeClick={handleRecipeClick} recipes={recipes} />
+    );
   var recipeComponent = isRecipeOpen ? (
     <RecipeInfo
       handleRecipeCloseClick={handleRecipeCloseClick}
@@ -74,7 +78,7 @@ const App = () => {
         </span>
       </div>
 
-      <RecipeList handleRecipeClick={handleRecipeClick} recipes={recipes} />
+      {recipeListComponent}
       {recipeComponent}
       {shoplistComponent}
     </div>
