@@ -5,6 +5,7 @@ body {
   display: grid;
   justify-content: center;
   background-image: url('https://images.unsplash.com/photo-1587016170014-d19a7772fbc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1480&q=80');
+  overflow: auto;
 }
 
 .container {
@@ -100,7 +101,7 @@ input {
   padding-top: 30px;
   padding-bottom: 30px;
   width: 40vw;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .listItem {
@@ -127,7 +128,7 @@ input {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-flow: row wrap;
-  overflow: scroll;
+  overflow: auto;
   justify-content: space-evenly;
 }
 
@@ -148,6 +149,7 @@ input {
   padding-bottom: 20px;
   padding-left: 10px;
   margin-top: 50px;
+  max-height: max-content;
 }
 
 .ingredientsEntry {
