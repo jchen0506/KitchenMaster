@@ -4,7 +4,7 @@
   "description": "Recipe searching app that also provide functionality to add items you need to grocery shopping list",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -d --watch",
+    "build": "webpack -d",
     "start": "nodemon server/index.js"
   },
   "repository": {
