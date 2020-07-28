@@ -12,8 +12,12 @@ const RecipeInfo = ({ currentRecipe, handleRecipeCloseClick }) => {
   });
 
   return isLoad ? (
-    <div>
-      <FontAwesomeIcon onClick={handleRecipeCloseClick} icon={faTimes} />
+    <div className="info">
+      <FontAwesomeIcon
+        className="closeButton"
+        onClick={handleRecipeCloseClick}
+        icon={faTimes}
+      />
       <Instructions
         instructions={currentRecipe.analyzedInstructions[0].steps}
       />

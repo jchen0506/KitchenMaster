@@ -3,7 +3,7 @@ import InstructionEntry from './InstructionEntry.jsx';
 
 const Instructions = ({ instructions }) => {
   return (
-    <div>
+    <div className="instructions">
       {instructions.map((step, index) => {
         return <InstructionEntry step={step} key={index} />;
       })}

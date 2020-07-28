@@ -17,8 +17,12 @@ const ShoppingList = ({ handleShopListCloseClick }) => {
   }, []);
 
   return (
-    <div>
-      <FontAwesomeIcon onClick={handleShopListCloseClick} icon={faTimes} />
+    <div className="shoplist">
+      <FontAwesomeIcon
+        className="closeButton"
+        onClick={handleShopListCloseClick}
+        icon={faTimes}
+      />
       {list.map((item, index) => {
         return <ListItem key={index} item={item} />;
       })}

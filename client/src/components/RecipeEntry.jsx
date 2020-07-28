@@ -6,15 +6,16 @@ const RecipetEntry = ({ recipe, handleRecipeClick }) => {
   };
 
   return (
-    <div>
+    <div className="recipeCard">
       <img
+        className="recipeImg"
         src={`https://spoonacular.com/recipeImages/${recipe.image}`}
         alt={recipe.title}
         onClick={recipeClick}
       />
-      <div>{recipe.title}</div>
-      <div>{recipe.servings} people servings</div>
-      <div>ready in {recipe.readyInMinutes} minutes</div>
+      <div className="title">{recipe.title}</div>
+      <div className="serving">{recipe.servings} people servings</div>
+      <div className="time">Ready in {recipe.readyInMinutes} minutes</div>
     </div>
   );
 };

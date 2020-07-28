@@ -34,7 +34,6 @@ const App = () => {
   };
 
   var handleShopListClick = () => {
-    console.log('clicked');
     setIsListOpen(true);
   };
 
@@ -58,10 +57,23 @@ const App = () => {
   ) : null;
 
   return (
-    <div>
-      <input onChange={handleInputChange} value={keyword} type="text" />
-      <button onClick={handleSearchClick}>Search Recipes</button>
-      <div onClick={handleShopListClick}>Shopping List</div>
+    <div className="container">
+      <h1>Kitchen Master</h1>
+      <input
+        onChange={handleInputChange}
+        value={keyword}
+        type="text"
+        placeholder="What do you want to cook today?"
+      />
+      <div className="buttons">
+        <span className="SearchButton" onClick={handleSearchClick}>
+          Search Recipes
+        </span>
+        <span className="ListButton" onClick={handleShopListClick}>
+          Shopping List
+        </span>
+      </div>
+
       <RecipeList handleRecipeClick={handleRecipeClick} recipes={recipes} />
       {recipeComponent}
       {shoplistComponent}

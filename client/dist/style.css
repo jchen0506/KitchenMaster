@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600;1,900&display=swap');
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1587016170014-d19a7772fbc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1480&q=80');
+}
+
+.container {
+  display: grid;
+  width: 90vw;
+  justify-items: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  color: rgb(224, 34, 34);
+  margin: auto 20px;
+}
+
+input {
+  width: 100%;
+  line-height: 1.2;
+  height: 62px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 31px;
+  font-size: 1.8rem;
+  padding-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.SearchButton,
+.ListButton {
+  cursor: pointer;
+  padding: 10px 6px;
+  text-align: center;
+  text-justify: center;
+  border: 1px solid transparent;
+  background-color: rgb(224, 34, 34);
+  color: white;
+  width: 40%;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.SearchButton:hover,
+.ListButton:hover {
+  opacity: 0.8;
+}
+
+.recipeList {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+}
+
+.recipeCard {
+  display: grid;
+  width: 33%;
+  grid-template-rows: 3fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.recipeImg {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  grid-row: 1;
+  cursor: pointer;
+}
+
+.title {
+  grid-row: 2;
+}
+
+.shoplist {
+  z-index: 2;
+  position: fixed;
+  background-color: rgb(245, 245, 220);
+  top: 30%;
+  left: 30%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 40vw;
+}
+
+.listItem {
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.closeButton {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+.info {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-flow: row wrap;
+  overflow: scroll;
+  justify-content: space-evenly;
+}
+
+.info .closeButton {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.instructions,
+.ingredients {
+  position: relative;
+  width: 40%;
+  text-align: left;
+  background-color: rgb(245, 245, 220);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  margin-top: 50px;
+}
+
+.ingredientsEntry {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.step {
+  font-size: 1.5rem;
+  color: #f5425a;
+  border-bottom: 1px solid gray;
+}
+
+.instruction {
+  font-size: 1.2rem;
+}
+
+.ingredientName {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.ingredientAmount {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 5px;
+}

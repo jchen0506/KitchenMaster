@@ -10,17 +10,20 @@ const Ingredient = ({ ingredient }) => {
       .post(`/${url}?item=${ingredient.name}`)
       .then((res) => {
         setAdded(!added);
-        console.log(ingredient.name);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
+  var style = {
+    'background-color': added ? 'gray' : 'coral',
+  };
   return (
-    <div>
-      <div onClick={handleClick}>{ingredient.name}</div>
-      <div>
+    <div className="ingredientsEntry">
+      <div style={style} className="ingredientName" onClick={handleClick}>
+        {ingredient.name}
+      </div>
+      <div className="ingredientAmount">
         <span>{`${ingredient.measures.us.amount} ${ingredient.measures.us.unitLong}`}</span>
       </div>
     </div>
