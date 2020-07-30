@@ -11,7 +11,7 @@ A web application for users to search and browse recipes and if you find that yo
 You need Node.js (v12.16.1) and Redis (v6.0.6) installed to run this app on your local device.
 
 - Instructions for Redis installation: https://redis.io/topics/quickstart
-- Instructions for Node.js installation: https://redis.io/topics/quickstart
+- Instructions for Node.js installation: https://nodejs.org/en/download/package-manager/
 
 ### Installing Dependencies
 
