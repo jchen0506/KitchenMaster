@@ -24,7 +24,7 @@ module.exports = {
         res.status(200).json(response.data);
       })
       .catch((error) => {
-        res.status(404).send(error);
+        res.status(404).send('Error when retrieving recipes');
       });
   },
 
@@ -46,7 +46,7 @@ module.exports = {
         res.status(200).json(response.data);
       })
       .catch((error) => {
-        res.status(404).send(error);
+        res.status(404).send('Error when retrieving recipe instructions');
       });
   },
 };
